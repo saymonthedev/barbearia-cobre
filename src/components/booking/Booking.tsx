@@ -444,7 +444,7 @@ function StepBarber({
     <fieldset>
       <legend className="contents">
         <StepTitle headingRef={headingRef} hint="Cada um tem a sua mão. Escolha pelo estilo ou deixe com a gente.">
-          Com quem você <span className="display-italic text-copper-700">senta?</span>
+          Quem vai te <span className="display-italic text-copper-700">atender?</span>
         </StepTitle>
       </legend>
       <div className="grid gap-2.5 sm:grid-cols-2">

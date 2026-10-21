@@ -19,7 +19,7 @@ export function Notes() {
               Recados no espelho
             </p>
             <h2 id="recados-title" className="display mt-6 text-[clamp(2.75rem,6vw,4.75rem)]" data-reveal style={delay(80)}>
-              Quem senta, <span className="display-italic">volta.</span>
+              Quem vem, <span className="display-italic">volta.</span>
             </h2>
           </div>
           <p className="max-w-xs text-sm leading-relaxed text-bone-subtle md:text-right" data-reveal style={delay(140)}>
