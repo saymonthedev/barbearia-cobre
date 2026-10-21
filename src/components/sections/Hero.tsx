@@ -57,7 +57,7 @@ export function Hero() {
           <OpenStatus className="hero-in mt-9" />
 
           <Link
-            href="/primeira-visita"
+            href="/"
             className="hero-in group mt-8 flex max-w-md items-center justify-between gap-4 border-t border-(--line) pt-5 text-sm text-bone-soft"
             style={delay(440)}
           >

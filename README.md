@@ -4,7 +4,7 @@
 
 Site e landing page para uma barbearia, com **agendamento online em uma comanda de papel**: o cliente escolhe serviço, profissional, dia e horário, e a confirmação sai pronta para o WhatsApp.
 
-**[Ver o site](https://barbearia-cobre.vercel.app)** · **[Ver a landing page](https://barbearia-cobre.vercel.app/primeira-visita)**
+**[Ver a landing page](https://barbearia-cobre.vercel.app)** · **[Ver o site completo](https://barbearia-cobre.vercel.app/site)**
 
 ![Prévia do site](public/og.jpg)
 
@@ -22,7 +22,7 @@ Em vez das seções genéricas de sempre, cada parte do site é um objeto de den
 | Depoimentos | **Recados** colados no espelho | Escritos à mão, com fita adesiva |
 | Visite | **Placa pendurada** "Aberto / Fechado" | Mostra o status real de agora, no fuso de Brasília |
 
-A landing page **/primeira-visita** reaproveita a mesma linguagem para uma oferta: carimbo de preço, recibo com o que está incluso, três passos e a comanda já com o combo escolhido.
+A página inicial é uma **landing page** de oferta, que reaproveita a mesma linguagem para uma oferta: carimbo de preço, recibo com o que está incluso, três passos e a comanda já com o combo escolhido. O site institucional completo fica em **/site**.
 
 ## Funcionalidades
 
@@ -49,8 +49,8 @@ A landing page **/primeira-visita** reaproveita a mesma linguagem para uma ofert
 
 | Página | Desempenho (desktop / mobile) | Acessibilidade | Boas práticas | SEO |
 |---|---|---|---|---|
-| Início | 99 / 84 | 100 | 100 | 100 |
-| Primeira visita | 92 / 72–81 | 100 | 100 | 100 |
+| Landing page (`/`) | 92 / 72–81 | 100 | 100 | 100 |
+| Site completo (`/site`) | 99 / 84 | 100 | 100 | 100 |
 
 ## Rodar localmente
 
@@ -68,7 +68,7 @@ Requer Node.js 22 ou superior.
 
 ```
 src/
-  app/                 páginas (início, primeira-visita, 404), SEO e estilos globais
+  app/                 landing page (/), site completo (/site), 404, SEO e estilos globais
   components/
     booking/           a comanda de agendamento
     hero/              espelho e bilhete do próximo horário
