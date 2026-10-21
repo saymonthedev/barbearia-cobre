@@ -6,8 +6,7 @@ import { hoursTable } from "@/data/hours";
 
 /**
  * Rodapé em três faixas: convite final para agendar, informações úteis
- * (endereço, horário, navegação) e a linha de créditos. A marca d'água fica
- * atrás das informações, sem ocupar espaço próprio.
+ * (endereço, horário, navegação) e a linha de créditos.
  * `base` permite usar o rodapé fora do site completo (ex.: "/site" na landing page).
  */
 export function Footer({ base = "", bookingHref = "#agendar" }: { base?: string; bookingHref?: string }) {
@@ -29,11 +28,6 @@ export function Footer({ base = "", bookingHref = "#agendar" }: { base?: string;
 
       {/* Informações */}
       <div className="relative">
-        <div
-          aria-hidden="true"
-          data-watermark="Cobre"
-          className="display-italic pointer-events-none absolute -right-[0.04em] -bottom-[0.3em] -z-10 text-[clamp(9rem,30vw,26rem)] leading-none text-bone/[0.045] select-none before:content-[attr(data-watermark)]"
-        />
         <div className="container-page grid gap-12 py-14 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8 lg:py-16">
           <div className="lg:col-span-4">
             <Logo />
