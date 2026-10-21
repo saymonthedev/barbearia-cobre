@@ -240,7 +240,7 @@ export default function FirstVisit() {
           </div>
         </section>
       </main>
-      <Footer base="/site" />
+      <Footer base="/site" bookingHref="#reservar" />
     </>
   );
 }
