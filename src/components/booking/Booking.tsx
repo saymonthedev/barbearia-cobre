@@ -682,6 +682,7 @@ function StepDetails({
   return (
     <form
       noValidate
+      autoComplete="off"
       onSubmit={(event) => {
         event.preventDefault();
         onSubmit();
@@ -693,7 +694,7 @@ function StepDetails({
       <div className="grid gap-6">
         <LineField id={`${uid}-name`} label="Seu nome" error={nameError ? "Informe seu nome." : undefined}>
           {(props) => (
-            <input {...props} value={name} onChange={(e) => onName(e.target.value)} autoComplete="name" placeholder="Como te chamamos?" maxLength={60} />
+            <input {...props} value={name} onChange={(e) => onName(e.target.value)} placeholder="Como te chamamos?" maxLength={60} />
           )}
         </LineField>
         <LineField id={`${uid}-phone`} label="WhatsApp" optional error={phoneError ? "Confira o número com DDD." : undefined}>
@@ -702,7 +703,6 @@ function StepDetails({
               {...props}
               value={phone}
               onChange={(e) => onPhone(e.target.value)}
-              autoComplete="tel-national"
               inputMode="tel"
               placeholder="(47) 90000-0000"
             />
@@ -742,6 +742,13 @@ function LineField({
   error?: string;
   children: (props: {
     id: string;
+    name: string;
+    autoComplete: string;
+    autoCorrect: string;
+    spellCheck: boolean;
+    "data-1p-ignore": boolean;
+    "data-lpignore": string;
+    "data-form-type": string;
     className: string;
     "aria-invalid": boolean;
     "aria-describedby"?: string;
@@ -756,6 +763,13 @@ function LineField({
       <div className="relative">
         {children({
           id,
+          name: `${id}-field`,
+          autoComplete: "off",
+          autoCorrect: "off",
+          spellCheck: false,
+          "data-1p-ignore": true,
+          "data-lpignore": "true",
+          "data-form-type": "other",
           className:
             "peer mt-1 block w-full resize-none border-0 border-b-[1.5px] border-paper-ink/30 bg-transparent px-0 py-2.5 text-[1.0625rem] text-paper-ink placeholder:text-paper-muted/60 caret-copper-700 outline-none",
           "aria-invalid": Boolean(error),
